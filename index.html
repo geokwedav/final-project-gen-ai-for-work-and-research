@@ -10,10 +10,10 @@
             --brand-accent: #6d28d9; 
             --bg-dark: #0a0a0b;
             --bg-surface: #18181b;
-            --bg-light: #ffffff; /* New White Background */
+            --bg-light: #ffffff;
             --bg-card-light: #f4f4f5;
             --text-primary: #ffffff;
-            --text-dark: #09090b; /* New Dark Text */
+            --text-dark: #09090b;
             --text-secondary: #a1a1aa;
             --text-muted-dark: #52525b;
             --border: #3f3f46;
@@ -31,9 +31,10 @@
             background-color: var(--bg-dark);
             color: var(--text-primary);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        /* Navigation - Sleek & Dark */
+        /* Navigation */
         nav {
             background: rgba(10, 10, 11, 0.95);
             backdrop-filter: blur(10px);
@@ -80,7 +81,7 @@
             color: var(--text-primary);
         }
 
-        /* Hero Section - Immersive Dark Overlay */
+        /* Hero Section */
         header {
             height: 80vh;
             background: linear-gradient(to bottom, rgba(10,10,11,0.2), var(--bg-dark)), 
@@ -117,6 +118,7 @@
             font-weight: 700;
             border-radius: 50px;
             transition: transform 0.2s, background 0.2s;
+            display: inline-block;
         }
 
         .btn-primary:hover {
@@ -124,12 +126,11 @@
             background: #e4e4e7;
         }
 
-        /* Content Sections - Mixed Backgrounds */
+        /* Content Sections */
         .content-section {
             padding: 100px 10%;
         }
 
-        /* Light Section Variant */
         .content-section.light {
             background: var(--bg-light);
             color: var(--text-dark);
@@ -155,7 +156,7 @@
             color: var(--text-muted-dark);
         }
 
-        /* Info Grid - Modern Surface Cards */
+        /* Info Grid */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -198,7 +199,7 @@
             color: var(--text-muted-dark);
         }
 
-        /* Manual Grid - Universal Style */
+        /* Manual Grid */
         .manual-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -210,8 +211,10 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: background 0.2s;
-            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .light .card {
@@ -220,11 +223,7 @@
         }
 
         .card:hover {
-            background: var(--bg-card);
-        }
-
-        .light .card:hover {
-            background: var(--bg-card-light);
+            transform: translateY(-5px);
             border-color: var(--brand-accent);
         }
 
@@ -239,10 +238,6 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
-        }
-
-        .card:hover .card-img {
-            transform: scale(1.05);
         }
 
         .card-body {
@@ -330,6 +325,11 @@
             color: var(--text-secondary);
             text-decoration: none;
             font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--text-primary);
         }
 
         .footer-bottom {
@@ -361,8 +361,9 @@
             <span>PRODUCTION MANUAL</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#intro">Overview</a></li>
+            <li><a href="#intro">Objectives</a></li>
+            <!-- Updated Overview Link -->
+            <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20monitoring%20and%20acoustics.pdf" target="_blank">Overview</a></li>
             <li><a href="#manual">Library</a></li>
         </ul>
     </nav>
@@ -374,7 +375,7 @@
     </header>
 
     <main>
-        <!-- Project Overview - NOW IN WHITE -->
+        <!-- Project Overview -->
         <section class="content-section light" id="intro">
             <div class="section-header">
                 <h2>Project Objectives</h2>
@@ -401,7 +402,7 @@
             </div>
         </section>
 
-        <!-- The MIDI Protocol (Highlight Section) - DARK BREAKOUT -->
+        <!-- The MIDI Protocol -->
         <section class="content-section" style="background: var(--bg-surface);">
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
                 <span style="color: var(--brand-accent); text-transform: uppercase; font-weight: 800; font-size: 0.9rem; display: block; margin-bottom: 1rem;">Protocol Specification</span>
@@ -412,7 +413,7 @@
             </div>
         </section>
 
-        <!-- Manual Catalog - NOW IN WHITE -->
+        <!-- Manual Catalog -->
         <section class="content-section light" id="manual">
             <div class="section-header">
                 <h2>Technical Manuals</h2>
@@ -420,53 +421,53 @@
             </div>
 
             <div class="manual-grid">
-                <!-- Ch 1 -->
-                <div class="card">
+                <!-- Ch 1 - Updated Image & Link -->
+                <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/SETTING%20UP%20YOUR%20HOME%20STUDIO.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558403194-611308249627?auto=format&fit=crop&q=80&w=800" class="card-img">
+                        <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/homemusicstudio-1.jpg" class="card-img" alt="Home Studio Setup">
                     </div>
                     <div class="card-body">
                         <span class="card-label">Chapter 01</span>
                         <h3>Home Studio Setup</h3>
                         <p>Essential soundproofing strategies and the "room-within-a-room" philosophy for noise isolation.</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Ch 2 -->
-                <div class="card">
+                <!-- Ch 2 - Updated Link -->
+                <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EQUIPMENT%20FOR%20THE%20STUDIO.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Equipment and Gear">
                     </div>
                     <div class="card-body">
                         <span class="card-label">Chapter 02</span>
                         <h3>Equipment and gear</h3>
                         <p>In-depth analysis of synthesizers, samplers, and sequencers at the heart of the MIDI studio.</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Ch 3 -->
-                <div class="card">
+                <!-- Ch 3 - Updated Link -->
+                <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20mixing.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Essentials of Mixing">
                     </div>
                     <div class="card-body">
                         <span class="card-label">Chapter 03</span>
                         <h3>Essentials of mixing</h3>
                         <p>Matching the various instruments for each to be present to contribute to a song.</p>
                     </div>
-                </div>
+                </a>
 
-                <!-- Ch 4 -->
-                <div class="card">
+                <!-- Ch 4 - Updated Link -->
+                <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20monitoring%20and%20acoustics.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" class="card-img">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Monitoring and Acoustics">
                     </div>
                     <div class="card-body">
                         <span class="card-label">Chapter 04</span>
                         <h3>Monitoring and acoustics</h3>
                         <p>Selecting the right amplifiers and monitors for an honest representation of frequency response.</p>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -474,7 +475,7 @@
         <div class="cta-banner">
             <h2>Ready to produce?</h2>
             <p style="margin-bottom: 2rem; font-size: 1.2rem;">Access the full CMP-2024 repository and technical whitepapers.</p>
-            <a href="#" class="btn-primary">Download Manual (PDF)</a>
+            <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/" target="_blank" class="btn-primary">View Repository</a>
         </div>
     </main>
 
@@ -488,17 +489,23 @@
             <div class="footer-col">
                 <h4>Sections</h4>
                 <ul>
-                    <li><a href="#">Introduction</a></li>
-                    <li><a href="#">Studio Setup</a></li>
-                    <li><a href="#">Equipment</a></li>
-                    <li><a href="#">Mixing</a></li>
+                    <!-- Introduction updated to monitoring/acoustics link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20monitoring%20and%20acoustics.pdf" target="_blank">Introduction</a></li>
+                    <!-- Studio Setup updated link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/SETTING%20UP%20YOUR%20HOME%20STUDIO.pdf" target="_blank">Studio Setup</a></li>
+                    <!-- Equipment updated link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EQUIPMENT%20FOR%20THE%20STUDIO.pdf" target="_blank">Equipment</a></li>
+                    <!-- Mixing updated link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20mixing.pdf" target="_blank">Mixing</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="#">MIDI Glossaries</a></li>
-                    <li><a href="#">Web References</a></li>
+                    <!-- MIDI Glossaries updated link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Glossary.pdf" target="_blank">MIDI Glossaries</a></li>
+                    <!-- Web References updated link -->
+                    <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Sources%20and%20references.pdf" target="_blank">Web References</a></li>
                     <li><a href="#">Technical Data</a></li>
                 </ul>
             </div>
