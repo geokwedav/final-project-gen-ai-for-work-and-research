@@ -167,10 +167,13 @@
 
         .info-item {
             background: var(--bg-surface);
-            padding: 40px;
+            padding: 30px;
             border-radius: 12px;
             border: 1px solid var(--border);
             transition: border-color 0.3s;
+            display: flex;
+            gap: 20px;
+            align-items: center;
         }
 
         .light .info-item {
@@ -182,9 +185,21 @@
             border-color: var(--brand-accent);
         }
 
+        .info-item-content {
+            flex: 1;
+        }
+
+        .info-item-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
         .info-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
             color: var(--text-primary);
         }
 
@@ -194,6 +209,7 @@
 
         .info-item p {
             color: var(--text-secondary);
+            font-size: 0.95rem;
         }
 
         .light .info-item p {
@@ -345,6 +361,8 @@
 
         @media (max-width: 900px) {
             .info-grid { grid-template-columns: 1fr; }
+            .info-item { flex-direction: column; text-align: center; }
+            .info-item-img { width: 100%; height: 200px; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
             h1 { font-size: 3.5rem; }
         }
@@ -384,21 +402,40 @@
             </div>
             
             <div class="info-grid">
+                <!-- Objective 1: Equipment -->
                 <div class="info-item">
-                    <h3>Equipment</h3>
-                    <p>Exploring the computer power and throughput speeds required to handle high-performance DAW software without latency bottlenecks.</p>
+                    <div class="info-item-content">
+                        <h3>Equipment</h3>
+                        <p>Exploring the computer power and throughput speeds required to handle high-performance DAW software without latency bottlenecks.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graphic-equipment-two.jpg" class="info-item-img" alt="Equipment">
                 </div>
+
+                <!-- Objective 2: Musical Stimulus -->
                 <div class="info-item">
-                    <h3>Musical Stimulus</h3>
-                    <p>Leveraging basic keyboard and guitar skills as a catalyst for creative hobbyist composition and arrangement.</p>
+                    <div class="info-item-content">
+                        <h3>Musical Stimulus</h3>
+                        <p>Leveraging basic keyboard and guitar skills as a catalyst for creative hobbyist composition and arrangement.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/dreamstimefree_5747861.jpg" class="info-item-img" alt="Musical Stimulus">
                 </div>
+
+                <!-- Objective 3: Essentials of mixing -->
                 <div class="info-item">
-                    <h3>Essentials of mixing</h3>
-                    <p>Acquiring the know-how to achieve professional-grade balance suitable for television, radio, and digital streaming standards.</p>
+                    <div class="info-item-content">
+                        <h3>Essentials of mixing</h3>
+                        <p>Acquiring the know-how to achieve professional-grade balance suitable for television, radio, and digital streaming standards.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-musical-stimulus.jpg" class="info-item-img" alt="Essentials of mixing">
                 </div>
+
+                <!-- Objective 4: Cultural Design -->
                 <div class="info-item">
-                    <h3>Cultural Design</h3>
-                    <p>Discovering melodic and rhythmic structures that resonate with diverse ethnic and global music forms.</p>
+                    <div class="info-item-content">
+                        <h3>Cultural Design</h3>
+                        <p>Discovering melodic and rhythmic structures that resonate with diverse ethnic and global music forms.</p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-cultural-design.jpg" class="info-item-img" alt="Cultural Design">
                 </div>
             </div>
         </section>
@@ -478,7 +515,6 @@
                 <!-- Lesson 1 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/SETTING%20UP%20YOUR%20HOME%20STUDIO.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <!-- Updated Lesson 1 Image -->
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-home-studio.jpg" class="card-img" alt="Lesson 1 - Home studio setup">
                     </div>
                     <div class="card-body">
@@ -491,7 +527,6 @@
                 <!-- Lesson 2 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EQUIPMENT%20FOR%20THE%20STUDIO.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <!-- Updated Lesson 2 Image -->
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-equipment-geaar.jpg" class="card-img" alt="Lesson 2 - Equipment and gear">
                     </div>
                     <div class="card-body">
@@ -504,7 +539,6 @@
                 <!-- Lesson 3 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20mixing.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <!-- Updated Lesson 3 Image -->
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-mixing.jpg" class="card-img" alt="Lesson 3 - Essentials of mixing">
                     </div>
                     <div class="card-body">
@@ -517,7 +551,6 @@
                 <!-- Lesson 4 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Essentials%20of%20monitoring%20and%20acoustics.pdf" target="_blank" class="card">
                     <div class="card-img-wrapper">
-                        <!-- Updated Lesson 4 Image -->
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-monitoring.jpg" class="card-img" alt="Lesson 4 - Monitoring and acoustics">
                     </div>
                     <div class="card-body">
