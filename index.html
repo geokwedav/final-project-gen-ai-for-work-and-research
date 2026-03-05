@@ -293,6 +293,40 @@
             color: var(--text-muted-dark);
         }
 
+        /* Form Container */
+        .form-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--bg-card-light);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-wrapper {
+            position: relative;
+            padding-bottom: 120%; /* Aspect ratio fallback */
+            height: 0;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .form-wrapper {
+                padding-bottom: 1842px; /* Set specific height for large screens if needed */
+                height: 1842px;
+            }
+        }
+
+        .form-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         /* Call to Action Banner */
         .cta-banner {
             background: linear-gradient(135deg, var(--brand-accent), #4f46e5);
@@ -388,8 +422,7 @@
             <li><a href="#intro">Objectives</a></li>
             <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/raw/main/introduction-to-the-course.pdf" target="_blank">Overview</a></li>
             <li><a href="#lessons">Lessons</a></li>
-            <li><a href="#manual">Register</a></li>
-            <!-- BROCHURE LINK TOP RIGHT -->
+            <li><a href="#registration">Register</a></li>
             <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Master%20Class%20Brochure%20and%20Prices.pdf?raw=true" target="_blank">BROCHURE</a></li>
         </ul>
     </nav>
@@ -398,7 +431,7 @@
         <h1>Master Class in Electronic Music Production for <b>Beginners</b></h1>
         <p class="hero-desc">The essential guide to building a modern home studio and mastering MIDI integration and producing your own music.</p>
         <a href="#lessons" class="btn-primary">See course sections and lessons</a>
-        <a href="#manual" class="btn-primary">Register</a>
+        <a href="#registration" class="btn-primary">Register</a>
     </header>
 
     <main>
@@ -411,9 +444,7 @@
             <div class="info-grid">
                 <div class="info-item">
                     <div class="info-item-content">
-                        
                         <p>The aim of this course is to look at all the possibilities in electronic music production and processes such as setting up a computer-based home studio, acquiring the necessary tools and gadget, getting a deep dive into the essentials of monitoring and mixing. In addition, basic composing and arranging music and the mechanics of music, as well as ways of publishing your masterpiece will be covered. Let us have fun together for a hobby that is also enriching for the soul!</p><br>
-                        <!-- SEE THE MASTER CLASS BROCHURE LINK -->
                         <p><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/Master%20Class%20Brochure%20and%20Prices.pdf?raw=true" target="_blank" style="color: var(--brand-accent); font-weight: 700; text-decoration: none;">SEE THE MASTER CLASS BROCHURE!!</a></p>
                     </div>
                 </div>
@@ -472,7 +503,6 @@
             </div>
 
             <div class="manual-grid">
-                <!-- CHAPTER 01 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/SETTING%20UP%20YOUR%20HOME%20STUDIO.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/homemusicstudio-1.jpg" class="card-img" alt="Home Studio Setup">
@@ -484,7 +514,6 @@
                     </div>
                 </a>
 
-                <!-- CHAPTER 02 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EQUIPMENT%20FOR%20THE%20STUDIO.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Equipment and Gear">
@@ -496,7 +525,6 @@
                     </div>
                 </a>
 
-                <!-- CHAPTER 03 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/the-essentials-of-mixing-emp-2.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Essentials of Mixing">
@@ -508,7 +536,6 @@
                     </div>
                 </a>
 
-                <!-- CHAPTER 04 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/the-essentials-of-monitoring-and-acoustics-emp-2.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800" class="card-img" alt="Monitoring and Acoustics">
@@ -520,7 +547,6 @@
                     </div>
                 </a>
 
-                <!-- CHAPTER 05 -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/mechanics-of-music-2.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-culture-des.jpg" class="card-img" alt="The mechanics of music">
@@ -542,7 +568,6 @@
             </div>
 
             <div class="manual-grid">
-                <!-- Lesson 1 (REPLACED) -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EMP%20Master%20Class%20Lesson%201.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-home-studio.jpg" class="card-img" alt="Lesson 1 - Home studio setup">
@@ -554,7 +579,6 @@
                     </div>
                 </a>
 
-                <!-- Lesson 2 (REPLACED) -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EMP%20MASTER%20CLASS%20LESSON%202.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-equipment-geaar.jpg" class="card-img" alt="Lesson 2 - Equipment and gear">
@@ -566,7 +590,6 @@
                     </div>
                 </a>
 
-                <!-- Lesson 3 (REPLACED) -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EMP%20MASTER%20CLASS%20LESSON%203%20-%20MIXING.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-mixing.jpg" class="card-img" alt="Lesson 3 - Essentials of mixing">
@@ -578,7 +601,6 @@
                     </div>
                 </a>
 
-                <!-- Lesson 4 (REPLACED) -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EMP%20MASTER%20CLASS%20LESSON%204.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-monitoring.jpg" class="card-img" alt="Lesson 4 - Monitoring and acoustics">
@@ -590,7 +612,6 @@
                     </div>
                 </a>
 
-                <!-- Lesson 5 (REPLACED) -->
                 <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/EMP%20MASTER%20CLASS%20LESSON%205.pdf?raw=true" target="_blank" class="card">
                     <div class="card-img-wrapper">
                         <img src="https://raw.githubusercontent.com/geokwedav/final-project-gen-ai-for-work-and-research/main/a-graph-cultural-design.jpg" class="card-img" alt="Lesson 5 - The mechanics of music">
@@ -604,18 +625,31 @@
             </div>
         </section>
 
+        <!-- Registration Form Section -->
+        <section class="content-section light" id="registration" style="border-top: 1px solid var(--border-light);">
+            <div class="section-header" style="text-align: center;">
+                <h2>Register for the Master Class</h2>
+                <p>Fill out the form below to secure your spot in our upcoming intake.</p>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-wrapper">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdzFsthLhCys86pOR05bIL8lJ6g1zRB6gENAThaZaQWpf7NOA/viewform?embedded=true" width="640" height="1842" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Banner -->
         <div class="cta-banner">
             <h2>Ready to produce your own music?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.2rem; color: #e4e4e7;">Then click the button below to register for the master class.</p>
-            <a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/" target="_blank" class="btn-primary">Register</a>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem; color: #e4e4e7;">Complete the registration form above to get started today.</p>
+            <a href="#registration" class="btn-primary">Go to Form</a>
         </div>
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <!-- ABOUT THE INSTRUCTOR LINK -->
                 <h3><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/more-about-the-instructor.pdf?raw=true" target="_blank" style="color: inherit; text-decoration: none;">ABOUT THE INSTRUCTOR</a></h3>
                 <p>Electronic Music Production for Beginners</p>
                 <p style="margin-top: 1rem; font-size: 0.8rem; color: #52525b;">A George Davis Master Class</p>
@@ -632,9 +666,7 @@
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
-                    <!-- MIDI GLOSSARIES (REPLACED) -->
                     <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/more-about-glossary.pdf?raw=true" target="_blank">MIDI GLOSSARIES</a></li>
-                    <!-- WEB REFERENCES (REPLACED) -->
                     <li><a href="https://github.com/geokwedav/final-project-gen-ai-for-work-and-research/blob/main/more-about-resources.pdf?raw=true" target="_blank">WEB REFERENCES</a></li>
                 </ul>
             </div>
